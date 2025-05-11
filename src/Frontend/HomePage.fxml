@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" 
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="Frontend.HomeController"
+            stylesheets="@whatsapp-style.css">
+
+    <!-- Left Side - Contacts Panel -->
+    <VBox prefWidth="300" BorderPane.alignment="CENTER">
+        <!-- Header -->
+        <HBox style="-fx-background-color: #008069; -fx-padding: 10;">
+            <Label text="WhatsApp Clone" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18;"/>
+        </HBox>
+        
+        <!-- Search Box -->
+        <TextField promptText="Search contacts" style="-fx-padding: 5;">
+            <padding><Insets top="5" right="5" bottom="5" left="5"/></padding>
+        </TextField>
+        
+        <!-- Contacts List -->
+        <ListView fx:id="contactsList" style="-fx-background-insets: 0; -fx-border-width: 0;" />
+    </VBox>
+    
+    <!-- Right Side - Chat Area (Initially empty) -->
+    <StackPane>
+        <Label text="Select a contact to start chatting" style="-fx-text-fill: gray; -fx-font-size: 16;"/>
+    </StackPane>
+    
+    <!-- Bottom Status Bar -->
+    <bottom>
+        <HBox style="-fx-background-color: #f0f2f5; -fx-padding: 5;" alignment="CENTER_RIGHT">
+            <Label fx:id="welcomeLabel"/>
+            <Button text="Logout" onAction="#handleLogout" style="-fx-background-color: transparent;"/>
+        </HBox>
+    </bottom>
+</BorderPane>
