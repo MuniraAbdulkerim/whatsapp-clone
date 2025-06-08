@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Frontend.controllers.HomeController"
+            prefHeight="600" prefWidth="900">
+
+    <!-- Sidebar (Contacts) -->
+    <VBox prefWidth="270" style="-fx-background-color: #075E54;">
+        <HBox alignment="CENTER_LEFT" style="-fx-padding: 10;">
+            <ImageView fx:id="profilePic" fitHeight="38" fitWidth="38"/>
+            <Label fx:id="sidebarUserLabel" text="Your Name" style="-fx-text-fill: white; -fx-font-size: 18; -fx-padding: 0 0 0 10;"/>
+            <Button text="Logout" onAction="#handleLogout" style="-fx-background-color: transparent; -fx-text-fill: white;"/>
+        </HBox>
+        <TextField fx:id="searchContactsField" promptText="Search or start new chat" style="-fx-background-radius: 19; -fx-padding: 6 10;"/>
+        <ListView fx:id="contactsList" style="-fx-background-color: #075E54; -fx-padding: 6 0 0 0;"/>
+    </VBox>
+
+    <!-- Main Chat Area -->
+    <VBox style="-fx-background-color: #ece5dd;">
+        <HBox style="-fx-background-color: #128C7E; -fx-padding: 10 16;" alignment="CENTER_LEFT">
+            <ImageView fx:id="chatAvatar" fitHeight="34" fitWidth="34"/>
+            <Label fx:id="chatHeaderLabel" text="Select a chat" style="-fx-text-fill: white; -fx-font-size: 16; -fx-padding: 0 0 0 10;"/>
+        </HBox>
+        <ScrollPane fitToWidth="true" fitToHeight="true" style="-fx-background: transparent; -fx-border-width: 0;">
+            <VBox fx:id="messagesBox" style="-fx-padding: 15 10 15 10;" spacing="8"/>
+        </ScrollPane>
+        <HBox style="-fx-padding: 10 16; -fx-background-color: #f7f7fa;">
+            <TextField fx:id="messageField" promptText="Type a message..." HBox.hgrow="ALWAYS" style="-fx-background-radius: 20; -fx-padding: 8 16;"/>
+            <Button text="Send" onAction="#handleSendMessage" style="-fx-background-color: #25D366; -fx-text-fill: white; -fx-font-size: 15; -fx-background-radius: 20; -fx-padding: 8 16;"/>
+        </HBox>
+    </VBox>
+</BorderPane>

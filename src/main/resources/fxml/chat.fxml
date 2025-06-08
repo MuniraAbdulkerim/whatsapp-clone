@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.whatsapp.controller.ChatController"
+      spacing="10"
+      styleClass="chat-container">
+
+    <HBox spacing="10" styleClass="header">
+        <Label fx:id="contactNameLabel" styleClass="contact-name"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Button fx:id="backButton" text="Back" onAction="#handleBack"/>
+    </HBox>
+
+    <SplitPane VBox.vgrow="ALWAYS">
+        <!-- Contacts List -->
+        <VBox minWidth="200" prefWidth="250">
+            <TextField fx:id="searchField" promptText="Search contacts..." onKeyReleased="#handleSearch"/>
+            <ListView fx:id="contactsList" VBox.vgrow="ALWAYS" onMouseClicked="#handleContactSelect"/>
+        </VBox>
+
+        <!-- Chat Area -->
+        <VBox spacing="10">
+            <!-- Messages Area -->
+            <ScrollPane VBox.vgrow="ALWAYS" fitToWidth="true">
+                <VBox fx:id="messagesContainer" spacing="10" styleClass="messages-container"/>
+            </ScrollPane>
+
+            <!-- Message Input -->
+            <HBox spacing="10" styleClass="message-input">
+                <TextArea fx:id="messageInput" 
+                         promptText="Type a message..."
+                         prefRowCount="3"
+                         wrapText="true"
+                         HBox.hgrow="ALWAYS"/>
+                <Button fx:id="sendButton" 
+                        text="Send"
+                        onAction="#handleSendMessage"/>
+            </HBox>
+        </VBox>
+    </SplitPane>
+</VBox> 

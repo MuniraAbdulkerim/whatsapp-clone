@@ -1,0 +1,61 @@
+.chat-container {
+    -fx-background-color: #f0f2f5;
+    -fx-padding: 10;
+}
+
+.header {
+    -fx-background-color: #075e54;
+    -fx-padding: 10;
+    -fx-alignment: center-left;
+}
+
+.contact-name {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.messages-container {
+    -fx-padding: 10;
+    -fx-background-color: #e5ddd5;
+}
+
+.message-input {
+    -fx-padding: 10;
+    -fx-background-color: #f0f2f5;
+}
+
+.message-input .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+}
+
+.message-input .button {
+    -fx-background-color: #128c7e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.message-input .button:hover {
+    -fx-background-color: #075e54;
+}
+
+.contacts-list {
+    -fx-background-color: white;
+}
+
+.contacts-list .list-cell {
+    -fx-padding: 10;
+    -fx-border-color: #f0f2f5;
+    -fx-border-width: 0 0 1 0;
+}
+
+.contacts-list .list-cell:selected {
+    -fx-background-color: #e9ebeb;
+}
+
+.search-field {
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+} 

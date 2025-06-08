@@ -1,0 +1,83 @@
+/* Root colors */
+.root {
+    -primary-green: #075E54;
+    -secondary-green: #128C7E;
+    -chat-background: #e5ddd5;
+    -input-background: #f0f0f0;
+}
+
+/* Header styles */
+.header-bar {
+    -fx-background-color: -primary-green;
+    -fx-padding: 10px;
+    -fx-alignment: center-left;
+}
+
+.header-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+}
+
+/* Contacts panel */
+.contacts-panel {
+    -fx-background-color: white;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 0 1px 0 0;
+}
+
+.contacts-list {
+    -fx-background-insets: 0;
+    -fx-padding: 5px 0;
+}
+
+/* Chat area */
+.chat-container {
+    -fx-background-color: -chat-background;
+}
+
+.chat-area {
+    -fx-control-inner-background: -chat-background;
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+}
+
+/* Input area */
+.input-container {
+    -fx-background-color: -input-background;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+.message-input {
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 15px;
+}
+
+.send-button {
+    -fx-background-color: -primary-green;
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+
+.send-button:hover {
+    -fx-background-color: -secondary-green;
+}
+
+/* List cell styling */
+.list-cell {
+    -fx-background-color: white;
+    -fx-padding: 8px;
+}
+
+.list-cell:filled:hover {
+    -fx-background-color: #f5f5f5;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #e1f3fb;
+    -fx-border-color: #d1d1d1;
+    -fx-border-width: 0 0 1px 0;
+}

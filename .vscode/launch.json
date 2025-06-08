@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "WhatsappCloneApplication",
+      "request": "launch",
+      "mainClass": "main.java.com.whatsappclone.WhatsappCloneApplication",
+      "projectName": "whatsapp-clone_fb822d9d"
+    },
+    {
+      "type": "java",
+      "name": "MainApp",
+      "request": "launch",
+      "mainClass": "main.java.Frontend.MainApp",
+      "projectName": "whatsapp-clone_fb822d9d"
+    },
+    {
+      "type": "java",
       "name": "Launch WhatsAppClone",
       "request": "launch",
       "mainClass": "Frontend.MainApp",
